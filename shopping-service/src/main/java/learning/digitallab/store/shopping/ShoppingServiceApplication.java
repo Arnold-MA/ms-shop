@@ -1,13 +1,13 @@
-package learning.digitallab.store.product;
+package learning.digitallab.store.shopping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServiceProductApplication {
+public class ShoppingServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ServiceProductApplication.class, args);
+		SpringApplication.run(ShoppingServiceApplication.class, args);
 	}
 
 }

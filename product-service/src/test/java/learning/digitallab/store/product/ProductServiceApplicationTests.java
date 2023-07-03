@@ -1,10 +1,10 @@
-package learning.digitallab.store.shopping;
+package learning.digitallab.store.product;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServiceShoppingApplicationTests {
+class ProductServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
