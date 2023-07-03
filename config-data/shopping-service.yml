@@ -1,6 +1,6 @@
 logging:
   pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+    console: '%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n'
 server:
   error:
     include-message: always
@@ -8,7 +8,7 @@ server:
 spring:
   datasource:
     driverClassName: org.h2.Driver
-    password: ""
+    password: ''
     platform: h2
     url: jdbc:h2:mem:invoiceDB;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: sa
@@ -31,6 +31,6 @@ spring:
         use_sql_comments: false
     show-sql: true
 eureka:
-	client:
-		serviceUrl:
-			defaultZone: http://localhost:8099/eureka/
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8099/eureka/
