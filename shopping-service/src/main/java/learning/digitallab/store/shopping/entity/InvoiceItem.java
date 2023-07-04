@@ -2,6 +2,7 @@ package learning.digitallab.store.shopping.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Positive;
+import learning.digitallab.store.shopping.model.Product;
 import lombok.Data;
 
 @Data
@@ -22,6 +23,9 @@ public class InvoiceItem {
     // No se registra en la BD
     @Transient
     private Double subTotal;
+
+    @Transient
+    private Product product;
 
     public Double getSubTotal(){
         if (this.price >0  && this.quantity >0 ){

@@ -3,6 +3,7 @@ package learning.digitallab.store.shopping.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
+import learning.digitallab.store.shopping.model.Customer;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -37,6 +38,9 @@ public class Invoice {
     private List<InvoiceItem> items;
 
     private String status;
+
+    @Transient
+    private Customer customer;
 
     public Invoice() {
         items = new ArrayList<>();
