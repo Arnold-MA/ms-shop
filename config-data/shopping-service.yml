@@ -44,7 +44,7 @@ resilience4j.retry:
       enableExponentialBackoff: true
       exponentialBackoffMultiplier: 2
   instances:
-    order-service:
+    customer-service:
       baseConfig: default
       ignoreExceptions:
         - io.github.resilience4j.circuitbreaker.CallNotPermittedException
