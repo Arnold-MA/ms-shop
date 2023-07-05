@@ -35,17 +35,19 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8099/eureka/
 
-resilience4j.circuitbreaker:
+resilience4j.retry:
+  configs:
+    default:
+      registerHealthIndicator: true
+      maxAttempts: 3
+      waitDuration: 1s
+      enableExponentialBackoff: true
+      exponentialBackoffMultiplier: 2
   instances:
-    backendA:
-      registerHealthIndicator: true
-      slidingWindowSize: 100
-    backendB:
-      registerHealthIndicator: true
-      slidingWindowSize: 10
-      permittedNumberOfCallsInHalfOpenState: 3
-      slidingWindowType: TIME_BASED
-      minimumNumberOfCalls: 20
-      waitDurationInOpenState: 50s
-      failureRateThreshold: 50
-      eventConsumerBufferSize: 10
+    order-service:
+      baseConfig: default
+      ignoreExceptions:
+        - io.github.resilience4j.circuitbreaker.CallNotPermittedException
+management.endpoint.health.show-details: always
+management.endpoints.web.exposure.include: health,info,circuitbreakers,circuitbreakerevents,retries,retryevents
+management.health.retries.enabled: true
