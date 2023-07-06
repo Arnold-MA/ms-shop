@@ -49,5 +49,5 @@ resilience4j.retry:
       ignoreExceptions:
         - io.github.resilience4j.circuitbreaker.CallNotPermittedException
 management.endpoint.health.show-details: always
-management.endpoints.web.exposure.include: health,info,circuitbreakers,circuitbreakerevents,retries,retryevents,prometheus
+management.endpoints.web.exposure.include: "*"
 management.health.retries.enabled: true
