@@ -7,3 +7,5 @@ spring:
     config:
       username: root
       password: s3cr3t
+springdoc:
+  swagger-ui: path:/swagger-ui.html
